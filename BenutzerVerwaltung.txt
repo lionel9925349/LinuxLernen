@@ -1,0 +1,34 @@
+// Benutzer-Konten
+
+Benutzerverwaltung
+• Linux ist ein Multiuser-System: Es können mehrere Benutzer das System verwenden, auch
+gleichzeitig
+• Jeder Benutzer hat normalerweise sein eigenes Benutzer-Konto
+• Obligatorisch ist ein Benutzername, mit der der Benutzer sich am System anmeldet. Dieser
+Name muss auf dem System eindeutig sein
+• Linux unterscheidet generell zwischen Groß- und Kleinschreibung, das gilt auch für die
+Benutzernamen
+• Die UID, also die User-ID muss ebenfalls eindeutig sein und wird normalerweise vom System
+automatisch vergeben
+o Spezielle Benutzer haben IDs unter 1000, Root z.B. hat immer die ID 0
+o Normale Benutzer erhalten eine ID von 1000 aufwärts
+• Benutzer erhalten eine Login-Shell. Das ist die Umgebung, die für sie bereitgestellt wird,
+wenn sie sich auf der Konsole einloggen
+• Dash steht für Debian Almquist Shell und wird als Standard-Shell für Debian-Derivate
+verwendet
+• Einem Benutzer wird ein Home-Verzeichnis zugewiesen
+o root hat sein Home-Verzeichnis unter /root
+o Normaler Benutzer in der Regel unter /home/Benutzername
+• Einstellungen im Zusammenhang mit useradd und userdel werden in der Datei
+/etc/login.defs festgelegt
+• In der Datei /etc/default/useradd können weitere Voreinstellungen getroffen werden
+(zBsp. Festlegung der Login-Shell als Standard bei der Erstellung eines neuen Benutzers)
+• Gruppen werden verwendet, um mehreren Accounts Zugriffsrechte auf eine Ressource
+zuzuweisen
+• Jedem Benutzer wird eine Hauptgruppe zugewiesen. Standardmäßig wird hierfür eine
+Gruppe mit demselben Namen und derselben ID wie die des Benutzers angelegt
+• Als Alternative erhalten alle Benutzer dieselbe Hauptgruppe namens users. Sie hat meistens
+die ID 100. Das ist jedoch nicht so flexibel, daher erhalten Benutzer auf den meisten
+Systemen per Default ihre eigene Gruppe
+• Benutzer können Mitglied mehrerer Gruppen sein und werden teilweise automatisch
+bestimmten zusätzlichen Gruppen zugewiesen
