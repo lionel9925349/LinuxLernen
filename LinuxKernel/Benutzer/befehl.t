@@ -10,3 +10,5 @@ Den Benutzer caesar löschen. Mit der Option --backup wird das komplette Homever
 Den Benutzer dora löschen. Mit der Option --remove-all-files werden alle Dateien des Benutzers gelöscht:
 
 sudo deluser --remove-all-files dora 
+
+

@@ -1,0 +1,25 @@
+Die Kernel-Verzeichnisse /proc/ und /sys/
+• Es gibt zahlreiche virtuelle Dateisysteme für die verschiedenen Zwecke
+o Das Dateisystem proc, wird unter /proc gemountet
+o Das Dateisystem sysfs wird unter /sys gemountet
+• /sys und /proc stellen virtuelle Kernel-Verzeichnisse bereit
+• Sie existieren nur im Arbeitsspeicher und werden vom Kernel dynamisch erstellt
+• Die Daten darin werden beim Herunterfahren nicht gespeichert
+• Wichtige Dateien in /proc
+o cpuinfo: Zeigt z.B. Informationen zum Prozessor
+o interrupts: Zeigt Anfragen für Datenaustausch mit dem Prozessor
+o ioports: Zeigt die Input-Output-Adressen der Hardware-Komponenten. Über sie ist
+ein Datenaustausch zwischen der CPU und dem jeweiligen Gerät möglich
+o meminfo: Zeigt die Verwendung des Arbeitsspeichers
+o swaps: Hier wird der verwendete Swap-Space aufgeführt
+o version: Zeigt die Linux-Version des Systems an
+o Unter /proc befindet sich das Unterverzeichnis /sys mit weiteren
+Unterverzeichnissen für verschiedene Aspekte des Systems. Das umfasst Hardware,
+wie dev, fs oder net, aber auch Software, wie z.B. users
+o Die Unterverzeichnisse mit den Ziffern entsprechen den Prozess-IDs und beinhalten
+Dateien zu diesem jeweiligen Prozess
+• Die Dateien unter /proc können auch zur Manipulation und zum Tuning des Systems
+angepasst werden
+o Beispiel: Unter /proc/sys/net/ipv4 diverse Tuning-Parameter für den TCP/IP-Stack
+unter IPv4
+• Im Verzeichnis /sys befinden sich wie unter /proc Informa
