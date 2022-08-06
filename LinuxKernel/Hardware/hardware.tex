@@ -23,3 +23,43 @@ angepasst werden
 o Beispiel: Unter /proc/sys/net/ipv4 diverse Tuning-Parameter für den TCP/IP-Stack
 unter IPv4
 • Im Verzeichnis /sys befinden sich wie unter /proc Informa
+
+
+
+
+
+
+
+
+
+
+
+
+
+Das Geräteverzeichnis /dev unter der Lupe
+• Im Geräteverzeichnis /dev befinden sich aktive Komponenten, und auch Geräte die nicht
+permanent aktiv sind:
+o Character Devices, die nur seriell angesprochen werden können, also bit für bit
+hintereinander lesend und schreibend.
+Zum Beispiel die virtuellen Terminals tty xy
+o Block Devices, auf die wahlfrei und blockweise zugegriffen wird. Das bedeutet, dass
+nicht erst die ersten 1000 Bytes des Datenträgers ausgelesen werden müssen, bevor
+die Daten ab dem 1001. Byte gelesen werden können. Stattdessen kann gezielt auf
+die gewünschten Speicherblöcke zugegriffen werden.
+Zum Beispiel Festplatten und andere Speichergeräte
+o Die drei Ein- und Ausgabekanäle Stdin, stdout und stderr verweisen auf
+/proc/self/fd/
+o cdrom und dvd zeigen auf sr0. Dies ist die Gerätedatei für optische Laufwerke
+o Hinter /dev/random steckt ein hochwertigen Zufallsgenerator
+o Hinter /dev/urandom steckt ein nicht so hochwertigen Zufallsgenerator
+o /dev/zero liefert die geforderte Anzahl an Null-Bytes zurück
+o Bei /dev/null handelt es sich um den virtuellen Mülleimer. Alles was hier hin
+geschrieben wird ist unwiederbringlich verloren
+• Das Verzeichnis /dev ist Mountpoint für eine virtuelle Komponente namens udev und das
+verwendete Pseudo-Dateisystem nennt sich devtmpfs. Dieses Verzeichnis wird dynamisch
+vom Kernel und seinen Komponenten gefüllt und die hier aufgeführten Dateien sind nur
+virtuell vorhanden
+• Auch die Unterverzeichnisse unter /dev sind dynamisch erzeugte Objekte, die zur besseren
+Verwaltung dienen und meistens Symlinks bereitstellen. Denn wenn sich die
+Gerätebezeichnungen ändern, weil z.B. Festplatten intern umgesteckt werden, so werden
+hier einfach die Symlinks korrigiert und es passt wieder 
