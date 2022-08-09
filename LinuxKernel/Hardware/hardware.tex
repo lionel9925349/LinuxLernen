@@ -87,3 +87,25 @@ werden können
 
 
 
+USB-Speichersticks
+• Wird ein USB-Stick an einem Linux-System angeschlossen, so wird dieser automatisch
+erkannt, Treiber nachgeladen und gemountet
+• Mountpoint ist die UUID des USB-Sticks
+• Treiber-Module für die Unterstützung von USB:
+o OHCI, steht für Open Host Controller Interface
+o UHCI, steht für Universal Host Controller Interface und ist eine lizenzpflichtige
+Version von Intel. Beide dienen der Unterstützung von USB 1.1
+o EHCI, steht für Enhance HCI und stellt Unterstützung von USB 2.0 dar
+o UAS steht für USB attached SCSI und ist ein Protokoll, das für USB 3.0 eingeführt,
+aber abwärtskompatible ist
+o xHCI stellt ebenfalls den Support für USB 3.x sicher
+Geräteverwaltung mit Udev
+• Udev dient zur Geräteverwaltung und läuft als udevd im Hintergrund
+• Udev dient in erster Linie zur Verwaltung von Hotplugging-Geräten
+• Udev generiert die Inhalte des Geräteverzeichnisses /dev
+• Udev arbeitet nach festen, aber konfigurierbaren und erweiterbaren Regeln
+o /etc/udev/rules.d
+o /lib/udev/rules.d
+• Meldungen des Kernels die bestimmte Ereignisse, wie das Einbinden eines Speichermediums,
+anzeigen werden als uevents bezeichnet
+• Die uevents werden vom Udev-Daemon abgefangen und ausgewertet 
