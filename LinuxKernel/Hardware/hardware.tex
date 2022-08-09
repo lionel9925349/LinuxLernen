@@ -62,4 +62,28 @@ virtuell vorhanden
 • Auch die Unterverzeichnisse unter /dev sind dynamisch erzeugte Objekte, die zur besseren
 Verwaltung dienen und meistens Symlinks bereitstellen. Denn wenn sich die
 Gerätebezeichnungen ändern, weil z.B. Festplatten intern umgesteckt werden, so werden
-hier einfach die Symlinks korrigiert und es passt wieder 
+hier einfach die Symlinks korrigiert und es passt wieder
+
+
+
+Gerätetreiber verwalten mit modprobe & Co.
+• Voraussetzung für die Kommunikation des Linux-Kernels mit der im Computer integrierten
+oder angeschlossenen Hardware ist, dass der Kernel die Sprache der Komponente versteht.
+Hierfür ist ein Gerätetreiber notwendig
+• Der Gerätetreiber kann entweder bereits im Kernel fest einkompiliert sein oder aber
+dynamisch beim Systemstart oder im laufenden Betrieb als Loadable Kernel Modul (kurz:
+LKM) nachgeladen werden
+• Bei modernen Linux-Systemen erledigen die Subkomponenten des Kernels in der Regel die
+Hardware-Erkennung und integrieren den benötigten Treiber ganz automatisch
+• Verantwortlich für die Kernelverwaltung ist eine Komponente namens kmod. Das steht für
+Linux Kernel Module Handling 
+Kurs: LPIC-1 Linux-Bootcamp - In 30 Tagen zum Linux-Admin
+Trainer: Eric Amberg & Jannis Seemann
+© Eric Amberg und Jannis Seemann Seite 3
+• Es gibt unter Treibern diverse Anhängigkeiten die mit kmod list und lsmod angezeigt
+werden können
+• Treiber können auch manuell mit allen Abhängigkeiten nachinstalliert werden (modprobe)
+• Welche Abhängigkeiten vorhanden sind, zeigt der Inhalt der Datei modules.dep
+
+
+
