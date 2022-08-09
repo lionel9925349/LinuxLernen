@@ -109,3 +109,15 @@ o /lib/udev/rules.d
 • Meldungen des Kernels die bestimmte Ereignisse, wie das Einbinden eines Speichermediums,
 anzeigen werden als uevents bezeichnet
 • Die uevents werden vom Udev-Daemon abgefangen und ausgewertet 
+
+Der D-BUS
+• Der D-BUS ist eine Programmbibliothek, die dazu dient, dass Prozesse untereinander über
+einen logischen BUS kommunizieren können
+• Der D-BUS ist eine Middleware, eine Vermittlungsschicht zwischen Prozessen
+• Der D-BUS besteht aus drei Komponenten:
+o Dem D-BUS-Daemon
+o Der D-BUS-Bibliothek namens libdbus
+o Dem D-BUS-Protokoll
+• D-BUS erhält Informationen von Hotplugging-Ereignissen von Udev und sorgt im Beispiel des
+USB-Sticks dafür, dass diese Informationen an den Dateimanager weitergegeben werden.
+• Der D-BUS muss nicht konfiguriert werden 
