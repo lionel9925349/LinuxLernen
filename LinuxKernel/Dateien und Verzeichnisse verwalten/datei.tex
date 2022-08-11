@@ -21,3 +21,31 @@ in der $PATH Variable aufgenommen werden
 Unterordner). Mit der Option -p auch mit Unterordner
 • Der Befehl rm löscht sowohl Dateien als auch Verzeichnisse.
 Vorsicht beim Einsatz dieses Befehls!
+
+
+Verzeichnis-Listings verstehen
+• Ausgabe von des Befehls ls -l (langes Format)
+o Jede Datei bzw. jedes Unterverzeichnis stehen in einer eigenen Zeile
+o Der Punkt steht für das aktuelle Verzeichnis und der Doppelpunkt für das
+übergeordnete Verzeichnis
+o In der ersten Spalte steht der Dateityp
+▪ d steht für Directory, also ein Verzeichnis
+▪ – steht für normale Dateien
+▪ l wie Link, das sind Symbolische oder Softlinks
+▪ c für Character Device, das sind zeichenorientierte Geräte (Modems)
+▪ b für Block Device, das sind blockorientierte Geräte (Speichermedien)
+o Ausführbare Dateien werden in grün dargestellt (anhand der Rechte)
+o Die Rechte werden entsprechend angezeigt
+o Die Anzahl der Links auf diesen Eintrag
+o Der Eigentümer des Eintrags und die Gruppe, der der Eintrag zugewiesen wurde
+o Die Größe der Datei wird in Bytes angegeben
+o Datum der letzten Änderung
+• Der Befehl ls -F kann durch angehängt Zeichen kennzeichnen, um welche Art von Eintrag es
+sich handelt:
+o / Verzeichnisse
+o * ausführbare Dateien
+o @ symbolische Links
+• Der Befehl ls unterstützt sehr viele Optionen die flexibel miteinander kombiniert werden
+können. Siehe dazu Man-Page von ls und Befehlsübersicht dieses Kurses
+• Das Programm tree zeigt sehr übersichtlich den Verzeichnisbaum ab einem bestimmten
+Punkt an
