@@ -1,0 +1,23 @@
+Prozesse und Ressourcenverbrauch anzeigen
+ Der Befehl ps ist vielfältig und kann in unterschiedlicher Notation genutzt werden:
+o Linux-Notation: Optionen werden mit Minus (-) eingeleitet
+o BSD-Notation: Optionen werden ohne Minus geschrieben
+o GNU-Notation: Doppeltes Minus als Einleitung, danach komplette Wörter
+ Insbesondere Linux- und BSD-Notation nutzen unterschiedliche Buchstaben für dieselben
+Optionen, z.B. ps -e = ps ax
+
+ Welche Bedeutung die einzelnen Spalten haben, zeigt man ps
+ Der Befehl top zeigt die Prozesse und deren Ressourcennutzung dynamisch an
+ Mit htop wird die Darstellung noch etwas schöner
+ Beide Tools ermöglichen die Darstellung nach Spalten, htop unterstützt zudem Filter
+ Mit pstree können die Prozesse hierarchisch angezeigt werden
+Programme im Vordergrund und im Hingergrund ausführen und verwalten
+ Programme sperren normalerweise das Terminal, von dem aus sie aufgerufen wurden
+ Programme können mit STRG+C beendet werden
+ Programme können mit & im Hintergrund gestartet werden, sodass das Terminal weiter
+nutzbar bleibt
+ Jobs können mit fg und bg in den Vordergrund und zurück verschoben werden
+ Wird die Shell beendet, werden auch alle in dieser Shell gestarteten Programme beendet
+ Mit nohup <Prozess> kann ein Prozess so gestartet werden, dass er das HUP-Signal ignoriert,
+wenn die Shell beendet wird. Seine Ausgaben werden in nohup.out geschrieben
+ Mit disown <BG-ID> kann ein Prozess nachträglich von der Shell getrennt werden
