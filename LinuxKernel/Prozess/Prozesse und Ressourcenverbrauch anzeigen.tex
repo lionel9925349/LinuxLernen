@@ -21,3 +21,29 @@ nutzbar bleibt
  Mit nohup <Prozess> kann ein Prozess so gestartet werden, dass er das HUP-Signal ignoriert,
 wenn die Shell beendet wird. Seine Ausgaben werden in nohup.out geschrieben
  Mit disown <BG-ID> kann ein Prozess nachträglich von der Shell getrennt werden
+
+
+Prozesse beenden
+ Jeder Prozess hat eine automatisch vom Betriebssystem zugewiesene PID
+ Mit dem Befehl kill können diverse Signale an die Prozesse gesendet werden:
+o SIGTERM (15): normale Beendigung eines Prozesses
+o SIGKILL (9): harte Beendigung des Prozesses
+o SIGINT (2): Wird von STRG+C gesendet, wirkt wie SIGTERM
+o SIGSTOP (19): Wird von STRG+Z gesendet, hält den Prozess an
+o SIGHUP (1): Sendet das Terminal beim Beenden
+ Mit killall <Zeichenkette> können alle Prozesse beendet werden, die der Zeichenkette
+entsprechen
+Kurs: LPIC-1 Linux-Bootcamp - In 30 Tagen zum Linux-Admin
+Trainer: Eric Amberg & Jannis Seemann
+© Eric Amberg und Jannis Seemann Seite 2
+Prozess-Prioritäten mit Nice-Levels steuern
+ Jedem Prozess wird vom Linux-System bzw. der CPU ein bestimmter Grad an
+Aufmerksamkeit zugestanden
+ Dieser Grad wird durch das Nice-Level bestimmt, Standard ist 0
+ Die Priorität liegt zwischen -20 (höchste) und +19 (niedrigste)
+ Prioritäten können mit dem Programm nice beim Start des Programms gesetzt werden
+ Nur root darf Nice-Level heruntersetzen, Programme also höher priorisieren
+ Ein Programm mit Nice-Level -20 kann das System beeinträchtigen, dies sollte nur sehr
+vorsichtig eingesetzt werden
+ Mit renice können die Prioritäten eines laufenden Prozesses angepasst werden
+ Nice-Levels sind keine Booster-Funktion und können nur als eines von mehreren TuningMitteln gesehen werden
